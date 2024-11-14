@@ -96,7 +96,7 @@ ConstantRange decomposedUaddSat( const ConstantRange& x, const ConstantRange& y)
     if( newLower == newUpper )
         return ConstantRange(newLower);
     else
-        return ConstantRange::getNonEmpty(newLower, newUpper);
+        return ConstantRange::getNonEmpty(newLower, newUpper + 1);
 }
 
 int main(int argc, char** argv)
